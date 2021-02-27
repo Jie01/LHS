@@ -18,14 +18,6 @@ class _QrCodeState extends State<QrCode> {
   Barcode result;
   QRViewController controller;
 
-  final String code =
-      "HKEN:0WHBvLDSaeyJtZXRhZGF0YSI6eyJ0eXBlRW4iOiJTdG9yZXMvU2hvcHBpbmcgTWFsbHMiLCJ0eXBlWmgiOiLllYblupcv5ZWG5aC0In0sIm5hbWVaaCI6IuiNg+aWsOWkqeWcsCIsIm5hbWVFbiI6IkNpdHlXYWxrIiwidHlwZSI6IklNUE9SVCIsImhhc2giOiJhZGJlYzQxZjBjODI2ZTAwZjU0NWI2MDIxZWQ3MTMyNTJlNDRkMTAyMTAyZTk5MzAxYWU5NjhiZDBkMDQ1NGQzIn0=";
-
-  @override
-  void initState() {
-    parseJson(code.substring(14));
-    super.initState();
-  }
 
   void reassemble() {
     super.reassemble();
@@ -36,10 +28,7 @@ class _QrCodeState extends State<QrCode> {
     }
   }
 
-  final a = {
-    "nameZh": "abcd",
-    "nameEn": "cdef",
-  };
+
 
   Map<String, dynamic> parseJson(String response) {
     var normalized = base64Url.normalize(response);
